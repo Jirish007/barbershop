@@ -1,12 +1,12 @@
 import React, { Suspense, lazy } from 'react';
-import Navbar from './components/Navbar.tsx';
-import Hero from './components/Hero.tsx';
-import Team from './components/Team.tsx';
-import Services from './components/Services.tsx';
-import Pricing from './components/Pricing.tsx';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Team from './components/Team';
+import Services from './components/Services';
+import Pricing from './components/Pricing';
 
-const Offer = lazy(() => import('./components/Offer.tsx'));
-const Footer = lazy(() => import('./components/Footer.tsx'));
+const Offer = lazy(() => import('./components/Offer'));
+const Footer = lazy(() => import('./components/Footer'));
 
 const App: React.FC = () => {
   return (
