@@ -1,17 +1,24 @@
-import React from 'react'
-import { Link } from 'react-scroll'
+import React from 'react';
+import { Link } from 'react-scroll';
 
-function Navbar() {
+const Navbar: React.FC = () => {
+  const sections = ['team', 'services', 'pricing', 'offer', 'footer'];
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
         <a className="navbar-brand" href="#">THE BARBERSHOP</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {['team', 'services', 'pricing', 'offer', 'footer'].map((section) => (
+            {sections.map((section) => (
               <li className="nav-item" key={section}>
                 <Link
                   className="nav-link"
@@ -28,7 +35,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

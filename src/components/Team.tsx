@@ -1,12 +1,19 @@
 import React from 'react';
-import fred from '../assets/fred.webp'
-import adrian from '../assets/adrian.webp'
-import elmer from '../assets/elmer.webp'
-import james from '../assets/james.webp'
-import walter from '../assets/walter.webp'
-import alex from '../assets/alex.webp'
-const team = [
-  { name: 'Fred Morrison', role: 'Owner', image:fred},
+import fred from '../assets/fred.webp';
+import adrian from '../assets/adrian.webp';
+import elmer from '../assets/elmer.webp';
+import james from '../assets/james.webp';
+import walter from '../assets/walter.webp';
+import alex from '../assets/alex.webp';
+
+type TeamMember = {
+  name: string;
+  role: string;
+  image: string;
+};
+
+const team: TeamMember[] = [
+  { name: 'Fred Morrison', role: 'Owner', image: fred },
   { name: 'Adrian Scold', role: 'Barber / Stylist', image: adrian },
   { name: 'Elmer Briggs', role: 'Barber / Stylist', image: elmer },
   { name: 'James Oliver', role: 'Barber / Stylist', image: james },
@@ -14,7 +21,7 @@ const team = [
   { name: 'Alex Green', role: 'Barber / Stylist', image: alex },
 ];
 
-const Team = () => {
+const Team: React.FC = () => {
   return (
     <section className="section bg-white" id="team">
       <div className="container text-center">
@@ -28,7 +35,7 @@ const Team = () => {
                   className="card-img-top"
                   alt={member.name}
                   style={{ height: '300px', objectFit: 'cover' }}
-                  loading='lazy'
+                  loading="lazy"
                 />
                 <div className="card-body">
                   <h5>{member.name}</h5>

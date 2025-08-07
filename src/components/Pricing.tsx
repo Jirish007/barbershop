@@ -1,11 +1,19 @@
 import React from 'react';
 
-const prices = [
-  ['Regular Haircut', 50], ['Royal Shave',300], ['Specialty Men’s Haircut', 100], ['Massaging Shampoo', 30],
-  ['Haircut + Royal Shave', 100], ['Haircut + Beard Trim', 65], ['Men’s Color', 40], ['Long Haircut', 90]
+type PriceItem = [title: string, price: number];
+
+const prices: PriceItem[] = [
+  ['Regular Haircut', 50],
+  ['Royal Shave', 300],
+  ['Specialty Men’s Haircut', 100],
+  ['Massaging Shampoo', 30],
+  ['Haircut + Royal Shave', 100],
+  ['Haircut + Beard Trim', 65],
+  ['Men’s Color', 40],
+  ['Long Haircut', 90],
 ];
 
-const Pricing = () => {
+const Pricing: React.FC = () => {
   return (
     <section className="section bg-white" id="pricing">
       <div className="container text-center">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <header className="bg-dark text-white text-center section">
       <div className="container">

@@ -1,6 +1,11 @@
 import React from 'react';
 
-const services = [
+type Service = {
+  icon: string;
+  label: string;
+};
+
+const services: Service[] = [
   { icon: 'scissors', label: 'Hair Cut' },
   { icon: 'shower', label: 'Shaving' },
   { icon: 'cut', label: 'Beard Trim' },
@@ -9,7 +14,7 @@ const services = [
   { icon: 'child', label: 'Kids Haircut' },
 ];
 
-const Services = () => {
+const Services: React.FC = () => {
   return (
     <section className="section bg-light" id="services">
       <div className="container text-center">

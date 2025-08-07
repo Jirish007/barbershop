@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Offer = () => {
+const Offer: React.FC = () => {
   return (
     <section className="section bg-dark text-white text-center" id="offer">
       <div className="container">
